@@ -1,0 +1,97 @@
+<title>Sign Guyz Site Concepts</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Preview shell: compact toolbar over a framed live page; the concepts carry the visual weight. */
+:root {
+  --bg: #eceae5; --panel: #f8f7f4; --fg: #1d1f23; --muted: #62646b; --line: #cfccc4; --accent: #c8372d;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #16171a; --panel: #202226; --fg: #ecebe7; --muted: #a2a4ab; --line: #3a3c42; --accent: #ff7a6b; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #16171a; --panel: #202226; --fg: #ecebe7; --muted: #a2a4ab; --line: #3a3c42; --accent: #ff7a6b; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 400 15px/1.5 var(--sans); padding-inline: 16px; padding-block: 20px 32px; }
+.shell { max-width: 1400px; margin: 0 auto; display: grid; gap: 16px; }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+h1 { margin: 0; font-size: 28px; font-stretch: 75%; font-weight: 750; letter-spacing: -.01em; }
+.sub { color: var(--muted); max-width: 70ch; }
+.tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.tab { text-align: left; font: inherit; color: inherit; background: var(--panel); border: 1.5px solid var(--line); padding: 14px 16px; cursor: pointer; display: grid; gap: 4px; min-width: 0; }
+.tab[aria-selected="true"] { border-color: var(--fg); box-shadow: inset 0 -4px 0 var(--accent); }
+.tab b { font-size: 18px; font-stretch: 80%; }
+.tab span { color: var(--muted); font-size: 13.5px; }
+.tab .k { font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.tab:focus-visible, .seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 760px) { .tabs { grid-template-columns: 1fr; } }
+.bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; }
+.seg { display: inline-flex; border: 1.5px solid var(--line); }
+.seg button { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; padding: 10px 14px; background: var(--panel); color: var(--muted); border: 0; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.bar a { color: var(--fg); font-size: 14px; }
+.stage { background: var(--panel); border: 1.5px solid var(--line); padding: 16px; display: grid; justify-items: center; overflow: hidden; }
+iframe { display: block; width: 100%; height: 78vh; min-height: 560px; border: 1px solid var(--line); background: #fff; transition: width .25s ease; }
+.stage.phone iframe { width: 390px; max-width: 100%; height: 760px; border-radius: 28px; border: 10px solid #111; }
+@media (prefers-reduced-motion: reduce) { iframe { transition: none; } }
+.notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.notes div { min-width: 0; display: grid; gap: 6px; align-content: start; }
+.notes h2 { margin: 0; font: 500 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.notes p { margin: 0; }
+@media (max-width: 760px) { .notes { grid-template-columns: 1fr; } }
+.legend { font-size: 13px; color: var(--muted); }
+</style>
+
+<div class="shell">
+  <header>
+    <div>
+      <h1>The Sign Guyz: three homepage directions</h1>
+      <p class="sub">Same content and site map in each, built from the project brief. Photos are placeholders; highlighted figures (years, installs, boom reach, coverage, pricing) are waiting on Andrew's answers.</p>
+    </div>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Concepts">
+    <button class="tab" role="tab" id="t-a" aria-selected="true" data-src="a-hivis.html" data-i="0"><span class="k">Concept A</span><b>Hi-Vis</b><span>Job-site daylight. Photo-led, safety yellow, heavy condensed type.</span></button>
+    <button class="tab" role="tab" id="t-b" aria-selected="false" data-src="b-shop-drawing.html" data-i="1"><span class="k">Concept B</span><b>Shop Drawing</b><span>Reads like a submittal set. Trade-to-trade, precise, with a job form.</span></button>
+    <button class="tab" role="tab" id="t-c" aria-selected="false" data-src="c-night-shift.html" data-i="2"><span class="k">Concept C</span><b>Night Shift</b><span>Opens on a dark pylon at night. Service-first, aimed at property managers.</span></button>
+  </div>
+
+  <div class="bar">
+    <div class="seg" role="group" aria-label="Preview width">
+      <button id="v-desk" aria-pressed="true">Desktop</button>
+      <button id="v-phone" aria-pressed="false">Phone</button>
+    </div>
+    <a id="open" href="a-hivis.html" target="_blank" rel="noopener">Open this concept full page ↗</a>
+  </div>
+
+  <div class="stage" id="stage">
+    <iframe id="frame" src="a-hivis.html" title="Concept preview"></iframe>
+  </div>
+
+  <div class="notes" id="notes"></div>
+</div>
+
+<script>
+var NOTES = [
+  { good: "Strongest for credibility with sign shops: looks like a contractor who owns equipment. Big photos do the selling.", risk: "Needs genuinely good crane and pylon photos. Without them it looks empty.", lead: "Trade partners first, property managers second." },
+  { good: "Speaks the partner's language: scopes, refs, a schedule of services, and a job form with drawing upload on the home page.", risk: "Less emotional pull for property managers. Can feel cold if overdone on inner pages.", lead: "Trade partners almost exclusively." },
+  { good: "Best for the growth channel: opens on the problem a property manager actually has, with a problem picker and photo upload.", risk: "Leads with direct service, so the trade promise sits lower on the page.", lead: "Property managers first, trade second." }
+];
+var tabs = document.querySelectorAll('.tab'), frame = document.getElementById('frame'), open = document.getElementById('open');
+function notes(i) {
+  var n = NOTES[i];
+  document.getElementById('notes').innerHTML =
+    '<div><h2>Why it works</h2><p>' + n.good + '</p></div>' +
+    '<div><h2>Watch out for</h2><p>' + n.risk + '</p></div>' +
+    '<div><h2>Leads with</h2><p>' + n.lead + '</p></div>';
+}
+function pick(t) {
+  tabs.forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+  frame.src = t.dataset.src; open.href = t.dataset.src; notes(+t.dataset.i);
+  try { localStorage.setItem('sg-tab', t.id); } catch (e) {}
+}
+tabs.forEach(function (t) { t.addEventListener('click', function () { pick(t); }); });
+var dk = document.getElementById('v-desk'), ph = document.getElementById('v-phone'), stage = document.getElementById('stage');
+function view(phone) { stage.classList.toggle('phone', phone); dk.setAttribute('aria-pressed', String(!phone)); ph.setAttribute('aria-pressed', String(phone)); }
+dk.addEventListener('click', function () { view(false); });
+ph.addEventListener('click', function () { view(true); });
+notes(0);
+try { var s = localStorage.getItem('sg-tab'); if (s && document.getElementById(s)) pick(document.getElementById(s)); } catch (e) {}
+</script>

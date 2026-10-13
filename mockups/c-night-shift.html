@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Sign Guyz | Commercial Sign Repair, Service &amp; Installation, Durham Region</title>
+<meta name="description" content="Sign repair, lighting outages, tenant changeovers and maintenance plans for commercial properties, plus white-label installs for sign companies. Whitby, Oshawa and Durham Region.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"The Sign Guyz","telephone":"+1-905-429-9860","email":"Andrew@TheSignGuyz.ca","areaServed":"Durham Region, Ontario","openingHours":"Mo-Fr 09:00-17:00","url":"https://thesignguyz.ca"}
+</script>
+<style>
+/* Concept C, "Night Shift": opens at night on a lit plaza sign, the moment a property manager notices it is out. Deep night blue, warm LED-white glow, then daylight sections below. Calmer, service-first. */
+:root {
+  --night: #0f1a2b;
+  --night-2: #172338;
+  --glow: #ffd88a;
+  --glow-hot: #fff3d6;
+  --day: #f5f4f0;
+  --card: #ffffff;
+  --ink: #162033;
+  --muted: #5a6273;
+  --line: #dcdad3;
+  --ok: #2f7d5b;
+  --display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--day); color: var(--ink); font: 400 17px/1.6 var(--body); }
+a { color: inherit; }
+p { margin: 0; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; text-wrap: balance; letter-spacing: -.015em; }
+h2 { font-size: clamp(32px, 4.4vw, 52px); font-weight: 700; }
+h3 { font-size: 21px; font-weight: 600; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 24px; }
+.eyebrow { font: 600 13px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.tbc { background: #ffe9b8; color: #6a4b00; padding: 0 .25em; border-radius: 3px; }
+:focus-visible { outline: 3px solid var(--glow); outline-offset: 2px; }
+
+.ph { position: relative; border-radius: 6px; overflow: hidden; background: radial-gradient(120% 90% at 70% 30%, #2a3a57, #0f1a2b 70%); }
+.ph::after { content: "PHOTO PLACEHOLDER · " attr(data-shot); position: absolute; left: 12px; right: 12px; bottom: 12px; font: 500 11px/1.4 var(--body); letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.75); }
+.ph.day { background: linear-gradient(170deg, #c9ced6, #8e98a8); }
+
+/* night header + hero */
+.night { background: var(--night); color: #e9ecf2; }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: rgba(15,26,43,.94); backdrop-filter: blur(8px); color: #e9ecf2; }
+.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 66px; }
+.logo { font: 700 21px/1 var(--display); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.logo .bulb { width: 12px; height: 12px; border-radius: 50%; background: var(--glow); box-shadow: 0 0 12px 3px rgba(255,216,138,.65); }
+.nav { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
+.nav a { text-decoration: none; color: #b9c1d0; }
+.nav a:hover { color: var(--glow-hot); }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; font-weight: 600; text-decoration: none; white-space: nowrap; font-size: 15px; font-variant-numeric: tabular-nums; border: 0; cursor: pointer; font-family: inherit; }
+.pill.glow { background: var(--glow); color: var(--night); box-shadow: 0 0 24px rgba(255,216,138,.35); }
+.pill.line { border: 1.5px solid rgba(233,236,242,.4); color: #e9ecf2; }
+.pill.dark { background: var(--ink); color: #fff; }
+@media (max-width: 960px) { .nav { display: none; } .top .pill { margin-left: auto; } }
+
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding-block: 72px 88px; }
+.hero h1 { font-size: clamp(44px, 6.6vw, 84px); font-weight: 700; }
+.lit { color: var(--glow-hot); text-shadow: 0 0 6px rgba(255,216,138,.9), 0 0 22px rgba(255,200,100,.55), 0 0 60px rgba(255,190,90,.3); }
+.flicker { animation: flick 6s infinite; }
+@keyframes flick { 0%, 62%, 66%, 100% { opacity: 1; } 63% { opacity: .25; } 64% { opacity: .9; } 65% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .flicker { animation: none; } }
+.hero .lede { margin-top: 22px; font-size: 19px; color: #b9c1d0; max-width: 46ch; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.hero .ph { aspect-ratio: 4/5; max-width: 100%; box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 30px 80px rgba(0,0,0,.4); }
+@media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding-block: 48px 64px; } .hero .ph { aspect-ratio: 16/10; } }
+
+/* problem picker (PM front door) */
+.picker { background: var(--night-2); border-top: 1px solid rgba(255,255,255,.06); }
+.picker .wrap { padding-block: 36px; display: grid; gap: 18px; }
+.picker h2 { font-size: 22px; font-weight: 600; color: #e9ecf2; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips a { text-decoration: none; padding: 12px 16px; border-radius: 10px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: #e9ecf2; font-size: 15px; display: grid; gap: 2px; }
+.chips a small { color: #93a0b6; font-size: 13px; }
+.chips a:hover { border-color: var(--glow); }
+
+section { padding-block: 88px; }
+
+/* trust */
+.trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-block: 40px; border-bottom: 1px solid var(--line); }
+.trust div { display: grid; gap: 4px; }
+.trust strong { font: 700 34px/1 var(--display); font-variant-numeric: tabular-nums; }
+.trust span { color: var(--muted); font-size: 14px; }
+@media (max-width: 760px) { .trust { grid-template-columns: 1fr 1fr; } }
+
+/* two doors */
+.doors { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+.door { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 30px; display: grid; gap: 14px; align-content: start; }
+.door.trade { background: var(--night); color: #e9ecf2; border-color: var(--night); }
+.door.trade .eyebrow { color: var(--glow); }
+.door ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.door li { padding-left: 22px; position: relative; }
+.door li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+.door.trade li::before { background: var(--glow); box-shadow: 0 0 8px rgba(255,216,138,.7); }
+.promise-inline { border-left: 3px solid var(--glow); padding: 6px 0 6px 14px; font-family: var(--display); font-size: 19px; font-weight: 600; color: var(--glow-hot); }
+.door .pill { justify-self: start; margin-top: 6px; }
+@media (max-width: 860px) { .doors { grid-template-columns: 1fr; } .door { padding: 24px; } }
+
+/* plans */
+.plans-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; }
+.plans-head p { color: var(--muted); }
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+.plan { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 28px 26px; display: grid; gap: 12px; align-content: start; }
+.plan.best { border: 2px solid var(--ink); }
+.plan .tag { justify-self: start; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; background: var(--ink); color: #fff; padding: 5px 9px; border-radius: 999px; }
+.plan .freq { font: 700 26px/1.1 var(--display); }
+.plan ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: grid; gap: 4px; }
+@media (max-width: 860px) { .plans-head, .plans { grid-template-columns: 1fr; } }
+
+/* changeover sequence */
+.change { background: var(--card); border-block: 1px solid var(--line); }
+.change-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+.change-grid figure { margin: 0; display: grid; gap: 12px; }
+.change-grid .ph { aspect-ratio: 4/3; max-width: 100%; }
+.change-grid figcaption { display: grid; gap: 4px; }
+.change-grid figcaption b { font-family: var(--display); font-size: 19px; }
+.change-grid figcaption span { color: var(--muted); font-size: 15px; }
+@media (max-width: 860px) { .change-grid { grid-template-columns: 1fr; } }
+
+/* services */
+.svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 36px; border-top: 1px solid var(--line); }
+.svc div { padding: 24px 22px 26px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; align-content: start; }
+.svc p { color: var(--muted); font-size: 15px; }
+@media (max-width: 860px) { .svc { grid-template-columns: 1fr; } }
+
+/* request form */
+.request { background: var(--night); color: #e9ecf2; }
+.request .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.request .side { display: grid; gap: 18px; }
+.request .side p { color: #b9c1d0; }
+.request .phone { font: 700 clamp(34px, 4.6vw, 52px)/1 var(--display); text-decoration: none; font-variant-numeric: tabular-nums; }
+form { background: var(--card); color: var(--ink); border-radius: 12px; padding: 28px; display: grid; gap: 14px; }
+.field { display: grid; gap: 6px; }
+label { font-size: 14px; font-weight: 600; }
+input, select, textarea { font: inherit; font-size: 16px; padding: 12px; border: 1px solid #c9ccd3; border-radius: 8px; background: #fff; color: var(--ink); width: 100%; }
+textarea { min-height: 90px; resize: vertical; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.upload { border: 1.5px dashed #b6bac4; border-radius: 8px; padding: 16px; display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+.form-note { font-size: 13px; color: var(--muted); }
+@media (max-width: 860px) { .request .wrap { grid-template-columns: 1fr; gap: 32px; } .two { grid-template-columns: 1fr; } form { padding: 20px; } }
+
+footer { background: var(--night); color: #93a0b6; font-size: 14px; border-top: 1px solid rgba(255,255,255,.08); padding-block: 36px 110px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--glow-hot); }
+
+.callbar { display: none; }
+@media (max-width: 760px) {
+  .wrap { padding-inline: 18px; }
+  section { padding-block: 60px; }
+  .callbar { display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(15,26,43,.96); }
+  .callbar a { flex: 1; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="night">
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="#"><span class="bulb" aria-hidden="true"></span>The Sign Guyz</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#pm">For Property Managers</a>
+        <a href="#trade">For Sign Companies</a>
+        <a href="#plans">Maintenance Plans</a>
+        <a href="#services">Services</a>
+        <a href="#request">Contact</a>
+      </nav>
+      <a class="pill glow" href="tel:+19054299860">(905) 429-9860</a>
+    </div>
+  </header>
+
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow" style="color:#93a0b6">Commercial sign service · Durham Region</p>
+      <h1 style="margin-top:16px">Half your pylon is dark. <span class="lit">We'll have it <span class="flicker">lit</span> this week.</span></h1>
+      <p class="lede">Repairs, lighting outages, tenant changeovers and maintenance plans for plazas and commercial buildings. Sign companies across the region trust us with their installs, too.</p>
+      <div class="hero-ctas">
+        <a class="pill glow" href="#request">Report a sign problem</a>
+        <a class="pill line" href="#trade">I'm a sign company</a>
+      </div>
+    </div>
+    <div class="ph" data-shot="Plaza pylon at night, several tenant panels lit, one dark" role="img" aria-label="Placeholder: plaza pylon sign at night with one panel out"></div>
+  </div>
+
+  <div class="picker">
+    <div class="wrap">
+      <h2>What's going on with your sign?</h2>
+      <div class="chips">
+        <a href="#request">Lights out or flickering<small>LED and ballast repair</small></a>
+        <a href="#request">Damaged or hanging<small>Same-day make-safe <span class="tbc">TBC</span></small></a>
+        <a href="#request">Tenant moving out<small>Remove, patch, re-sign</small></a>
+        <a href="#request">Pylon panels need updating<small>Directory and tenant faces</small></a>
+        <a href="#plans">Want it handled every year<small>Maintenance plans</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap trust">
+  <div><strong><span class="tbc">XX</span> years</strong><span>in the Durham sign trade</span></div>
+  <div><strong><span class="tbc">XXXX</span>+</strong><span>signs installed and serviced</span></div>
+  <div><strong>Own crane</strong><span><span class="tbc">XX</span> ft boom truck</span></div>
+  <div><strong>Insured</strong><span>WSIB covered, certificates on request</span></div>
+</div>
+
+<section class="wrap" id="pm">
+  <p class="eyebrow">Two ways we work</p>
+  <h2 style="margin-top:12px;max-width:20ch">Service for property owners. Installs for the trade.</h2>
+  <div class="doors">
+    <div class="door">
+      <p class="eyebrow">For property managers &amp; plaza owners</p>
+      <h3 style="font-size:28px">One call for every sign on the property</h3>
+      <ul>
+        <li>Lighting outages and repairs</li>
+        <li>Emergency make-safe after storms or impacts</li>
+        <li>Tenant changeovers, start to finish</li>
+        <li>Pylon and directory panel updates</li>
+        <li>Annual maintenance plans</li>
+      </ul>
+      <p style="color:var(--muted);font-size:15px">Need a brand-new sign designed? We'll connect you with a trusted local sign shop and install it for them.</p>
+      <a class="pill dark" href="#request">Book a free sign condition check</a>
+    </div>
+    <div class="door trade" id="trade">
+      <p class="eyebrow">For sign companies</p>
+      <h3 style="font-size:28px">Your install and service crew</h3>
+      <ul>
+        <li>White-label installation and fabrication</li>
+        <li>Crane and boom work</li>
+        <li>Removals, repairs and LED retrofits</li>
+        <li>Site surveys and permits</li>
+        <li>Photo report back to you on every job</li>
+      </ul>
+      <p class="promise-inline">We install under your brand. We never contact or sell to your customers.</p>
+      <a class="pill glow" href="#request">Send us a job</a>
+    </div>
+  </div>
+</section>
+
+<section class="change">
+  <div class="wrap">
+    <p class="eyebrow">Tenant changeover</p>
+    <h2 style="margin-top:12px;max-width:22ch">Old tenant out Friday. New sign up Tuesday.</h2>
+    <div class="change-grid">
+      <figure><div class="ph day" data-shot="Old tenant letters on fascia" role="img" aria-label="Placeholder: old tenant sign"></div><figcaption><b>1. Remove</b><span>Old letters or cabinet taken down and disposed of.</span></figcaption></figure>
+      <figure><div class="ph day" data-shot="Fascia with holes patched and sealed" role="img" aria-label="Placeholder: patched fascia"></div><figcaption><b>2. Patch</b><span>Holes filled, fascia sealed and painted to match.</span></figcaption></figure>
+      <figure><div class="ph" data-shot="New tenant sign lit at dusk" role="img" aria-label="Placeholder: new tenant sign lit"></div><figcaption><b>3. Install</b><span>New sign mounted, wired and tested.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="plans">
+  <div class="plans-head">
+    <div><p class="eyebrow">Maintenance plans</p><h2 style="margin-top:12px">Find the dead panel before your tenants do.</h2></div>
+    <p>Each visit covers lighting, faces, fasteners, electrical and structure, with a photo report for your files. Priced per property <span class="tbc">pricing to set</span>.</p>
+  </div>
+  <div class="plans">
+    <div class="plan"><p class="eyebrow">Inspect</p><p class="freq">Once a year</p><ul><li>Full inspection of every sign</li><li>Condition report with photos</li><li>Quote for anything that needs work</li></ul></div>
+    <div class="plan best"><span class="tag">Most plazas</span><p class="eyebrow">Priority</p><p class="freq">Twice a year</p><ul><li>Two inspections, spring and fall</li><li>Priority response on repairs</li><li>Minor lighting fixes included</li></ul></div>
+    <div class="plan"><p class="eyebrow">Full coverage</p><p class="freq">Year-round</p><ul><li>Everything in Priority</li><li>Emergency call-outs <span class="tbc">if staffed</span></li><li>Changeover pricing locked in</li></ul></div>
+  </div>
+</section>
+
+<section class="wrap" id="services" style="padding-top:0">
+  <p class="eyebrow">Services</p>
+  <div class="svc">
+    <div><h3>Installation</h3><p>Channel letters, cabinets, fascia, blades and wayfinding.</p></div>
+    <div><h3>Repair &amp; emergency service</h3><p>Dead lighting, storm damage, hanging faces.</p></div>
+    <div><h3>Crane &amp; rigging</h3><p>Boom truck lifts for pylons and high fascia.</p></div>
+    <div><h3>Removals &amp; changeovers</h3><p>Remove, patch, seal and re-sign.</p></div>
+    <div><h3>LED retrofits</h3><p>Neon and fluorescent cabinets converted to LED.</p></div>
+    <div><h3>Pylon &amp; monument signs</h3><p>Faces, directory panels and new structures.</p></div>
+  </div>
+</section>
+
+<section class="request" id="request">
+  <div class="wrap">
+    <div class="side">
+      <p class="eyebrow" style="color:var(--glow)">Talk to Andrew</p>
+      <h2>Tell us what's wrong. A photo from your phone is plenty.</h2>
+      <a class="phone" href="tel:+19054299860">(905) 429-9860</a>
+      <p>Andrew@TheSignGuyz.ca · Mon–Fri, 9–5<br>Serving Whitby, Oshawa, Ajax, Pickering, Clarington and the east GTA.</p>
+    </div>
+    <form id="reqform">
+      <div class="two">
+        <div class="field"><label for="r-name">Your name</label><input id="r-name" autocomplete="name"></div>
+        <div class="field"><label for="r-phone">Phone</label><input id="r-phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="r-who">I am a</label><select id="r-who"><option>Property manager / owner</option><option>Sign company</option><option>Business tenant</option></select></div>
+      <div class="field"><label for="r-addr">Property town</label><input id="r-addr" placeholder="e.g. Whitby"></div>
+      <div class="field"><label for="r-msg">What's happening?</label><textarea id="r-msg" placeholder="Top two tenant panels are dark on the Dundas St. pylon"></textarea></div>
+      <div class="upload"><label for="r-photo">Add photos</label><input id="r-photo" type="file" accept="image/*" multiple style="border:0;padding:0"></div>
+      <button class="pill dark" type="submit" style="justify-self:start">Send request</button>
+      <p class="form-note" id="r-note">Mockup form: nothing is sent.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 The Sign Guyz · Whitby, Ontario</span>
+    <span><a href="tel:+19054299860">(905) 429-9860</a> · <a href="mailto:Andrew@TheSignGuyz.ca">Andrew@TheSignGuyz.ca</a> · <a href="https://instagram.com/thesignguyz_andrew">Instagram</a></span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="pill glow" href="tel:+19054299860">Call</a>
+  <a class="pill line" href="#request">Send a photo</a>
+</nav>
+
+<script>
+document.getElementById('reqform').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('r-note').textContent = 'Mockup only: in the real site this goes to Andrew with your photos attached.';
+});
+</script>
+</body>
+</html>

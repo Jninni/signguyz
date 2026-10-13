@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Sign Guyz | Sign Installation &amp; Service, Durham Region</title>
+<meta name="description" content="White-label sign installation, crane work, repairs and maintenance for sign companies and commercial properties across Durham Region, Ontario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"The Sign Guyz","telephone":"+1-905-429-9860","email":"Andrew@TheSignGuyz.ca","areaServed":"Durham Region, Ontario","openingHours":"Mo-Fr 09:00-17:00","url":"https://thesignguyz.ca"}
+</script>
+<style>
+/* Concept A, "Hi-Vis": job-site daylight. Full-bleed photo hero, safety-yellow used like site tape, concrete ground, heavy condensed headings. */
+:root {
+  --concrete: #e4e2dd;
+  --concrete-2: #d3d0c9;
+  --asphalt: #1c1d1f;
+  --asphalt-2: #2a2b2e;
+  --hivis: #ffc414;
+  --ink: #1c1d1f;
+  --muted: #5d5b56;
+  --line: #bdb9b0;
+  --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--concrete); color: var(--ink); font: 400 17px/1.6 var(--body); }
+img { max-width: 100%; }
+a { color: inherit; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+h1, h2, h3 { font-family: var(--display); text-transform: uppercase; line-height: .95; margin: 0; text-wrap: balance; letter-spacing: .005em; }
+h2 { font-size: clamp(40px, 6vw, 72px); font-weight: 800; }
+h3 { font-size: 28px; font-weight: 800; }
+p { margin: 0; }
+.label { font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.tbc { background: rgba(255,196,20,.35); outline: 1px dashed #a07a00; padding: 0 .2em; border-radius: 2px; }
+:focus-visible { outline: 3px solid var(--hivis); outline-offset: 2px; }
+
+/* placeholders */
+.ph { position: relative; background:
+  repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 14px, transparent 14px 28px),
+  linear-gradient(160deg, #4a4d52, #23252a 70%); color: #fff; overflow: hidden; }
+.ph::after { content: "PHOTO PLACEHOLDER · " attr(data-shot); position: absolute; left: 12px; bottom: 12px; right: 12px;
+  font: 500 11px/1.4 var(--mono); letter-spacing: .08em; color: rgba(255,255,255,.8); }
+
+/* header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--asphalt); color: #fff; }
+.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 64px; }
+.logo { font: 900 26px/1 var(--display); text-transform: uppercase; text-decoration: none; letter-spacing: .02em; }
+.logo b { color: var(--hivis); }
+.nav { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
+.nav a { text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; color: var(--hivis); }
+.call { background: var(--hivis); color: var(--ink); font-weight: 600; padding: 10px 16px; text-decoration: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 960px) { .nav { display: none; } .top .call { margin-left: auto; } }
+
+/* hero */
+.hero { position: relative; color: #fff; min-height: 620px; display: flex; align-items: flex-end; }
+.hero .ph { position: absolute; inset: 0; }
+.hero .ph::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20,20,22,.9) 10%, rgba(20,20,22,.2) 70%); }
+.hero .ph::after { top: 84px; bottom: auto; left: auto; right: 24px; text-align: right; }
+.hero-inner { position: relative; padding-block: 120px 56px; }
+.hero h1 { font-size: clamp(56px, 10vw, 136px); font-weight: 900; max-width: 11ch; }
+.hero h1 span { color: var(--hivis); }
+.hero p.lede { font-size: 20px; max-width: 46ch; margin-top: 20px; color: #e8e6e1; }
+.tape { height: 14px; background: repeating-linear-gradient(-45deg, var(--hivis) 0 18px, var(--asphalt) 18px 36px); }
+
+/* doors */
+.doors { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.door { padding: 40px 32px 44px; display: grid; gap: 14px; align-content: start; }
+.door:first-child { background: var(--hivis); }
+.door:last-child { background: var(--asphalt-2); color: #fff; }
+.door h3 { font-size: 40px; }
+.door ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.door li::before { content: "— "; }
+.btn { display: inline-block; justify-self: start; margin-top: 10px; padding: 14px 22px; font-weight: 600; text-decoration: none; border: 2px solid currentColor; }
+.door:first-child .btn { background: var(--ink); color: var(--hivis); border-color: var(--ink); }
+.door:last-child .btn { background: var(--hivis); color: var(--ink); border-color: var(--hivis); }
+@media (max-width: 760px) { .doors { grid-template-columns: 1fr; } .door { padding: 32px 24px; } }
+
+/* trust strip */
+.trust { background: var(--asphalt); color: #fff; }
+.trust .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { padding: 26px 16px 26px 0; border-right: 1px solid #3a3b3f; display: grid; gap: 6px; }
+.stat:last-child { border-right: 0; }
+.stat strong { font: 800 44px/1 var(--display); color: var(--hivis); font-variant-numeric: tabular-nums; }
+.stat + .stat { padding-left: 20px; }
+.stat span { font-size: 14px; color: #c9c7c1; }
+@media (max-width: 760px) { .trust .wrap { grid-template-columns: 1fr 1fr; } .stat { border-right: 0; border-bottom: 1px solid #3a3b3f; padding-left: 0 !important; } }
+
+/* promise */
+section { padding-block: 88px; }
+.promise { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+.promise blockquote { margin: 0; font: 900 clamp(40px, 5.5vw, 70px)/.95 var(--display); text-transform: uppercase; }
+.promise blockquote em { font-style: normal; background: var(--hivis); padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.promise-copy { display: grid; gap: 18px; color: var(--muted); }
+.promise-copy strong { color: var(--ink); }
+@media (max-width: 860px) { .promise { grid-template-columns: 1fr; gap: 28px; } }
+
+/* process */
+.process { background: var(--concrete-2); }
+.process-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--line); border: 2px solid var(--ink); }
+.step { background: var(--concrete); padding: 24px 22px 28px; display: grid; gap: 10px; align-content: start; }
+.step .n { font: 900 64px/1 var(--display); color: var(--ink); }
+.step h3 { font-size: 24px; }
+.step p { font-size: 15px; color: var(--muted); }
+@media (max-width: 860px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+
+/* services */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--ink); margin-top: 40px; }
+.svc { padding: 26px 24px 30px 0; border-bottom: 1px solid var(--line); display: grid; gap: 10px; align-content: start; }
+.svc:not(:nth-child(3n+1)) { padding-left: 24px; border-left: 1px solid var(--line); }
+.svc p { color: var(--muted); font-size: 15px; }
+.svc .label { color: var(--muted); }
+@media (max-width: 860px) { .svc-grid { grid-template-columns: 1fr; } .svc:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; } }
+
+/* projects */
+.projects { background: var(--asphalt); color: #fff; }
+.projects .process-head p { color: #c9c7c1; }
+.proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.proj { display: grid; gap: 12px; }
+.proj .ph { aspect-ratio: 4/3; max-width: 100%; }
+.proj .meta { display: flex; gap: 10px; flex-wrap: wrap; }
+.chip { font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 6px 8px; border: 1px solid #55565b; color: #d8d6d0; }
+.chip.y { border-color: var(--hivis); color: var(--hivis); }
+.proj h3 { font-size: 26px; }
+.proj p { color: #c9c7c1; font-size: 15px; }
+.proj:first-child { grid-column: span 2; }
+.proj:first-child .ph { aspect-ratio: 16/9; }
+@media (max-width: 860px) { .proj-grid { grid-template-columns: 1fr; } .proj:first-child { grid-column: auto; } }
+
+/* plans */
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+.plan { background: #fff; border: 2px solid var(--ink); padding: 26px 24px; display: grid; gap: 14px; align-content: start; }
+.plan.pop { background: var(--hivis); }
+.plan ul { margin: 0; padding-left: 18px; font-size: 15px; display: grid; gap: 4px; }
+.plan .price { font: 800 30px/1 var(--display); }
+@media (max-width: 860px) { .plans { grid-template-columns: 1fr; } }
+
+/* about */
+.about { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
+.about .ph { aspect-ratio: 4/5; max-width: 100%; }
+.about-copy { display: grid; gap: 18px; }
+.about-copy p { color: var(--muted); }
+.kit { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit span { font: 500 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 8px 10px; background: var(--asphalt); color: #fff; }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
+
+/* cta + footer */
+.cta { background: var(--hivis); padding-block: 72px; }
+.cta .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.cta h2 { max-width: 14ch; }
+.cta .phone { font: 900 clamp(40px, 6vw, 72px)/1 var(--display); text-decoration: none; font-variant-numeric: tabular-nums; }
+.cta-side { display: grid; gap: 8px; }
+footer { background: var(--asphalt); color: #c9c7c1; font-size: 14px; padding-block: 48px 110px; }
+footer .wrap { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+footer h4 { font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: #fff; margin: 0 0 12px; }
+footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--hivis); }
+@media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }
+
+/* mobile call bar */
+.callbar { display: none; }
+@media (max-width: 760px) {
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding-bottom: env(safe-area-inset-bottom, 0px); background: var(--asphalt); }
+  .callbar a { text-align: center; padding: 16px 8px; font-weight: 600; text-decoration: none; color: #fff; }
+  .callbar a:first-child { background: var(--hivis); color: var(--ink); }
+  .hero { min-height: 560px; }
+  section { padding-block: 64px; }
+  .wrap { padding-inline: 18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">The Sign <b>Guyz</b></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#trade">For Sign Companies</a>
+      <a href="#pm">For Property Managers</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="call" href="tel:+19054299860">Call (905) 429-9860</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="ph" data-shot="Boom truck lifting a pylon cabinet into place, Oshawa plaza, golden hour" role="img" aria-label="Placeholder: crane lifting a pylon sign cabinet"></div>
+  <div class="wrap hero-inner">
+    <p class="label" style="color:var(--hivis);margin-bottom:18px">Installation · Crane work · Service · Durham Region</p>
+    <h1>We put the sign up. <span>You keep the client.</span></h1>
+    <p class="lede">Installation, crane and boom work, repairs and maintenance for sign companies and commercial properties across Durham Region.</p>
+  </div>
+</div>
+<div class="tape" aria-hidden="true"></div>
+
+<div class="doors">
+  <div class="door" id="trade">
+    <p class="label">For sign companies</p>
+    <h3>Your install crew, without the payroll.</h3>
+    <ul>
+      <li>White-label installation and fabrication</li>
+      <li>Crane and boom work, removals, repairs</li>
+      <li>LED retrofits, site surveys, permits</li>
+    </ul>
+    <a class="btn" href="#">Send us a job</a>
+  </div>
+  <div class="door" id="pm">
+    <p class="label" style="color:var(--hivis)">For property managers</p>
+    <h3>Keep every sign on the property lit and safe.</h3>
+    <ul>
+      <li>Lighting outages, repairs and emergency make-safe</li>
+      <li>Tenant changeovers and pylon panel updates</li>
+      <li>Annual maintenance plans</li>
+    </ul>
+    <a class="btn" href="#">Request a free sign check</a>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="stat"><strong><span class="tbc">XX</span> yrs</strong><span>in the sign trade</span></div>
+    <div class="stat"><strong><span class="tbc">XXXX</span>+</strong><span>installs completed</span></div>
+    <div class="stat"><strong><span class="tbc">XX</span> ft</strong><span>boom reach, own equipment</span></div>
+    <div class="stat"><strong>WSIB</strong><span>covered · <span class="tbc">$X M</span> liability</span></div>
+  </div>
+</div>
+
+<section class="wrap promise">
+  <blockquote>We install under your brand. <em>We never contact or sell to your customers.</em></blockquote>
+  <div class="promise-copy">
+    <p class="label" style="color:var(--ink)">The white-label promise</p>
+    <p><strong>Your customer sees your company.</strong> We show up in plain or your-branded gear, we hand your customer your card, and every question goes back to you.</p>
+    <p>When a property manager calls us for a new sign, we send them to a partner shop to design and build it. We install it. We don't sell storefront signs.</p>
+    <p>Certificates of insurance and WSIB clearance available on request.</p>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="process-head">
+      <h2>How a trade job runs</h2>
+      <p class="label">Typical turnaround: <span class="tbc">X–X days</span> from drawings</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Drawings in</h3><p>Send the approved drawings, site address and any permit info. We confirm scope and price the same day.</p></div>
+      <div class="step"><span class="n">2</span><h3>Site survey</h3><p>We check the wall, power, access and lift position, and flag problems before install day.</p></div>
+      <div class="step"><span class="n">3</span><h3>Scheduled install</h3><p>Booked to suit your customer and the site. Crane, boom and crew are ours.</p></div>
+      <div class="step"><span class="n">4</span><h3>Photo report</h3><p>Before, during and after photos sent to you, ready to forward under your name.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="services">
+  <h2>Services</h2>
+  <div class="svc-grid">
+    <div class="svc"><span class="label">01 · Trade &amp; direct</span><h3>Installation</h3><p>Channel letters, cabinets, fascia panels, blade signs and wayfinding, installed to drawings.</p></div>
+    <div class="svc"><span class="label">02 · Trade &amp; direct</span><h3>Repair &amp; emergency</h3><p>Storm damage, hanging panels and dead lighting. Made safe first, repaired properly after.</p></div>
+    <div class="svc"><span class="label">03 · Trade</span><h3>Crane &amp; rigging</h3><p>Boom truck lifts for pylons, high fascia and rooftop work. Operated by us.</p></div>
+    <div class="svc"><span class="label">04 · Trade &amp; direct</span><h3>Removals &amp; changeovers</h3><p>Old sign down, fascia patched and sealed, new tenant sign installed.</p></div>
+    <div class="svc"><span class="label">05 · Trade &amp; direct</span><h3>LED retrofits</h3><p>Neon and fluorescent cabinets converted to LED. Lower power bills, fewer service calls.</p></div>
+    <div class="svc"><span class="label">06 · Trade &amp; direct</span><h3>Pylon &amp; monument</h3><p>New pylons, faces, directory panels and footing work for plazas and business parks.</p></div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="process-head">
+      <h2>Recent work</h2>
+      <p>Trade projects are shown by town and job type only.</p>
+    </div>
+    <div class="proj-grid">
+      <article class="proj">
+        <div class="ph" data-shot="Pylon install at dusk, cabinet lit" role="img" aria-label="Placeholder: pylon sign install at dusk"></div>
+        <div class="meta"><span class="chip y">Crane &amp; rigging</span><span class="chip">Oshawa</span></div>
+        <h3>Pylon install, Oshawa plaza</h3>
+        <p>Old 30-year pylon cut down, new double-sided cabinet lifted and set in one morning while the plaza stayed open.</p>
+      </article>
+      <article class="proj">
+        <div class="ph" data-shot="Channel letters, before/after LED" role="img" aria-label="Placeholder: channel letters LED retrofit"></div>
+        <div class="meta"><span class="chip y">LED retrofit</span><span class="chip">Whitby</span></div>
+        <h3>Channel letter retrofit</h3>
+        <p>Failing neon replaced with LED modules and a new power supply.</p>
+      </article>
+      <article class="proj">
+        <div class="ph" data-shot="Bare fascia after removal, patched" role="img" aria-label="Placeholder: fascia after sign removal"></div>
+        <div class="meta"><span class="chip y">Changeover</span><span class="chip">Ajax</span></div>
+        <h3>Tenant changeover</h3>
+        <p>Old letters removed, fascia patched and painted, new tenant sign up in two days.</p>
+      </article>
+      <article class="proj">
+        <div class="ph" data-shot="Wind-damaged cabinet face, make-safe" role="img" aria-label="Placeholder: storm-damaged sign cabinet"></div>
+        <div class="meta"><span class="chip y">Emergency</span><span class="chip">Pickering</span></div>
+        <h3>Storm make-safe</h3>
+        <p>Loose face secured the same afternoon; permanent repair booked for the next week.</p>
+      </article>
+      <article class="proj">
+        <div class="ph" data-shot="Plaza directory pylon, new tenant panels" role="img" aria-label="Placeholder: directory pylon panel update"></div>
+        <div class="meta"><span class="chip y">Pylon panels</span><span class="chip">Courtice</span></div>
+        <h3>Directory panel refresh</h3>
+        <p>Six tenant panels swapped on a plaza directory sign without a lane closure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="process-head">
+    <h2>Maintenance plans for properties</h2>
+    <p class="label">Pricing per property · <span class="tbc">to set</span></p>
+  </div>
+  <div class="plans">
+    <div class="plan"><p class="label">Inspect</p><p class="price">Annual</p><ul><li>One full inspection a year</li><li>Lighting, fasteners, faces, electrical</li><li>Written condition report with photos</li></ul></div>
+    <div class="plan pop"><p class="label">Priority</p><p class="price">Semi-annual</p><ul><li>Two inspections a year</li><li>Priority response on repairs</li><li>Bulb and LED module replacement included</li></ul></div>
+    <div class="plan"><p class="label">Full coverage</p><p class="price">Year-round</p><ul><li>Everything in Priority</li><li>Emergency call-outs <span class="tbc">if staffed</span></li><li>One annual changeover credit</li></ul></div>
+  </div>
+</section>
+
+<section class="process" id="about">
+  <div class="wrap about">
+    <div class="ph" data-shot="Andrew at the controls of the boom truck" role="img" aria-label="Placeholder: portrait of Andrew with boom truck"></div>
+    <div class="about-copy">
+      <p class="label">About</p>
+      <h2>Andrew runs every job.</h2>
+      <p>The Sign Guyz is Andrew's company, based in Whitby. Most of the work comes from sign shops across the region that trust him with their installs, their tough lifts and their customers.</p>
+      <p>He has been in the trade for <span class="tbc">XX</span> years. The same person who quotes the job is on site when it goes up.</p>
+      <div class="kit"><span>Boom truck · <span class="tbc">XX ft</span></span><span>Bucket truck</span><span>Licensed electrical <span class="tbc">?</span></span><span>Working at heights</span><span>WSIB</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Got a sign that needs to go up or come down?</h2>
+    <div class="cta-side">
+      <a class="phone" href="tel:+19054299860">(905) 429-9860</a>
+      <span>Andrew@TheSignGuyz.ca · Mon–Fri, 9–5</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#" style="color:#fff">The Sign <b style="color:var(--hivis)">Guyz</b></a>
+      <p style="margin-top:12px;max-width:40ch">Sign installation and service partner for sign companies and commercial properties in Durham Region, Ontario.</p>
+    </div>
+    <div><h4>Service area</h4><ul><li>Whitby · Oshawa · Ajax</li><li>Pickering · Clarington</li><li>Brooklin · Uxbridge · Scugog</li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+19054299860">(905) 429-9860</a></li><li><a href="mailto:Andrew@TheSignGuyz.ca">Andrew@TheSignGuyz.ca</a></li><li><a href="https://instagram.com/thesignguyz_andrew">Instagram</a></li></ul></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a href="tel:+19054299860">Call Andrew</a>
+  <a href="#">Send a job</a>
+</nav>
+
+</body>
+</html>

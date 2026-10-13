@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Sign Guyz | Installation Partner for Sign Companies, Durham Region</title>
+<meta name="description" content="White-label sign installation, crane work and service for sign shops and commercial properties in Whitby, Oshawa and across Durham Region.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"The Sign Guyz","telephone":"+1-905-429-9860","email":"Andrew@TheSignGuyz.ca","areaServed":"Durham Region, Ontario","openingHours":"Mo-Fr 09:00-17:00","url":"https://thesignguyz.ca"}
+</script>
+<style>
+/* Concept B, "Shop Drawing": the site reads like a submittal set. Grid paper, ink lines, dimension callouts, redline markup for the promise, title block footer. Speaks trade-to-trade. */
+:root {
+  --paper: #f3f4f1;
+  --sheet: #fbfbf9;
+  --ink: #18263a;
+  --ink-2: #44516a;
+  --grid: #dfe3e3;
+  --rule: #b8c0c8;
+  --redline: #c8372d;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); font: 400 17px/1.6 var(--body); font-stretch: 100%;
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px; }
+a { color: inherit; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; line-height: 1.02; text-wrap: balance; font-stretch: 75%; font-weight: 750; letter-spacing: -.005em; }
+h2 { font-size: clamp(34px, 4.6vw, 56px); }
+h3 { font-size: 22px; font-stretch: 85%; font-weight: 700; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 24px; }
+.mono { font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.tbc { color: var(--redline); border-bottom: 1px dashed var(--redline); }
+:focus-visible { outline: 2px solid var(--redline); outline-offset: 2px; }
+
+.sheet { background: var(--sheet); border: 1.5px solid var(--ink); }
+
+/* placeholder: drafted crosshair box */
+.ph { position: relative; background: var(--sheet); border: 1.5px solid var(--ink);
+  background-image: linear-gradient(to top right, transparent calc(50% - .6px), var(--rule) calc(50% - .6px), var(--rule) calc(50% + .6px), transparent calc(50% + .6px)),
+                    linear-gradient(to bottom right, transparent calc(50% - .6px), var(--rule) calc(50% - .6px), var(--rule) calc(50% + .6px), transparent calc(50% + .6px)); }
+.ph::after { content: "PHOTO PLACEHOLDER: " attr(data-shot); position: absolute; left: 10px; right: 10px; bottom: 10px; background: var(--sheet); padding: 6px 8px; border: 1px solid var(--rule);
+  font: 500 11px/1.35 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-2); }
+
+/* header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--sheet); border-bottom: 1.5px solid var(--ink); }
+.top .wrap { display: flex; align-items: center; gap: 28px; min-height: 66px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-stretch: 70%; font-size: 24px; letter-spacing: .01em; text-transform: uppercase; }
+.logo i { width: 28px; height: 28px; border: 2px solid var(--ink); display: grid; place-items: center; font: 500 11px/1 var(--mono); font-style: normal; }
+.nav { display: flex; gap: 24px; margin-left: auto; font-size: 15px; }
+.nav a { text-decoration: none; }
+.nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; background: var(--ink); color: var(--sheet); text-decoration: none; font-weight: 600; font-size: 15px; border: 1.5px solid var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; cursor: pointer; font-family: inherit; }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn:hover { background: var(--redline); border-color: var(--redline); color: #fff; }
+@media (max-width: 980px) { .nav { display: none; } .top .btn { margin-left: auto; } }
+
+/* hero */
+.hero { padding-block: 64px 48px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: stretch; }
+.hero-copy { display: grid; gap: 24px; align-content: center; }
+.dim { position: relative; padding-top: 26px; }
+.dim::before { content: ""; position: absolute; top: 9px; left: 0; right: 0; height: 0; border-top: 1px solid var(--ink-2); }
+.dim::after { content: attr(data-dim); position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: var(--paper); padding: 0 8px; font: 500 11px/18px var(--mono); letter-spacing: .08em; color: var(--ink-2); }
+.dim > .tick { position: absolute; top: 3px; width: 1px; height: 13px; background: var(--ink-2); }
+.dim > .tick.l { left: 0; } .dim > .tick.r { right: 0; }
+.hero h1 { font-size: clamp(46px, 7.4vw, 92px); font-stretch: 68%; font-weight: 800; line-height: .94; text-transform: uppercase; }
+.hero .lede { font-size: 19px; max-width: 48ch; color: var(--ink-2); }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero .ph { min-height: 420px; }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .hero .ph { min-height: 260px; } }
+
+/* spec table: trust */
+.spec { display: grid; grid-template-columns: repeat(4, 1fr); }
+.spec > div { padding: 16px 18px; border-right: 1px solid var(--rule); display: grid; gap: 4px; }
+.spec > div:last-child { border-right: 0; }
+.spec strong { font-size: 30px; font-stretch: 75%; font-weight: 750; font-variant-numeric: tabular-nums; }
+.spec .mono { color: var(--ink-2); }
+@media (max-width: 760px) { .spec { grid-template-columns: 1fr 1fr; } .spec > div { border-bottom: 1px solid var(--rule); } .spec > div:nth-child(2n) { border-right: 0; } }
+
+section { padding-block: 80px; }
+.sec-head { display: grid; grid-template-columns: 160px 1fr; gap: 24px; margin-bottom: 36px; align-items: baseline; }
+.sec-head .mono { color: var(--redline); }
+@media (max-width: 760px) { .sec-head { grid-template-columns: 1fr; gap: 8px; } }
+
+/* doors */
+.doors { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.door { padding: 28px 28px 32px; display: grid; gap: 16px; align-content: start; }
+.door header { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
+.door h3 { font-size: 34px; font-stretch: 72%; }
+.door table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.door td { border-top: 1px solid var(--grid); padding: 8px 0; vertical-align: top; }
+.door td:first-child { font: 500 11px/1.9 var(--mono); color: var(--ink-2); width: 44px; }
+@media (max-width: 860px) { .doors { grid-template-columns: 1fr; } }
+
+/* promise: redline markup */
+.promise { position: relative; padding: 44px 40px; }
+.promise p.big { font-size: clamp(30px, 4.2vw, 52px); font-stretch: 72%; font-weight: 750; line-height: 1.05; max-width: 22ch; }
+.promise .ring { color: var(--redline); position: relative; white-space: nowrap; }
+.promise .ring::before { content: ""; position: absolute; inset: -.08em -.25em; border: 2px solid var(--redline); border-radius: 50%; transform: rotate(-2deg); }
+.promise .note { position: absolute; right: 32px; top: 28px; max-width: 30ch; color: var(--redline); font: 500 12px/1.5 var(--mono); letter-spacing: .04em; text-transform: uppercase; border-left: 2px solid var(--redline); padding-left: 12px; }
+.promise .fine { margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; color: var(--ink-2); font-size: 15px; }
+@media (max-width: 860px) { .promise { padding: 28px 22px; } .promise .note { position: static; margin-bottom: 16px; } .promise .fine { grid-template-columns: 1fr; } .promise .ring { white-space: normal; } }
+
+/* process sequence */
+.seq { display: grid; grid-template-columns: repeat(4, 1fr); counter-reset: s; }
+.seq li { list-style: none; padding: 22px 20px 26px; border-left: 1px solid var(--rule); display: grid; gap: 8px; align-content: start; position: relative; }
+.seq li:first-child { border-left: 0; }
+.seq li::before { counter-increment: s; content: "STEP " counter(s, decimal-leading-zero); font: 500 11px/1 var(--mono); letter-spacing: .1em; color: var(--redline); }
+.seq p { font-size: 15px; color: var(--ink-2); }
+.seq { margin: 0; padding: 0; }
+@media (max-width: 860px) { .seq { grid-template-columns: 1fr; } .seq li { border-left: 0; border-top: 1px solid var(--rule); } .seq li:first-child { border-top: 0; } }
+
+/* services schedule */
+.schedule { width: 100%; border-collapse: collapse; font-size: 15px; }
+.schedule th { text-align: left; font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); padding: 12px 14px; border-bottom: 1.5px solid var(--ink); background: var(--paper); }
+.schedule td { padding: 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.schedule td:first-child { font: 500 12px/1.6 var(--mono); color: var(--ink-2); width: 56px; }
+.schedule td strong { font-size: 18px; font-stretch: 85%; }
+.schedule .dot { display: inline-block; width: 10px; height: 10px; border: 1.5px solid var(--ink); border-radius: 50%; }
+.schedule .dot.on { background: var(--ink); }
+.scroll { overflow-x: auto; }
+
+/* projects */
+.proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.proj { display: grid; gap: 0; }
+.proj .ph { aspect-ratio: 4/3; max-width: 100%; border-bottom: 0; }
+.proj .cap { padding: 14px 16px 18px; display: grid; gap: 6px; }
+.proj .mono { color: var(--ink-2); }
+.proj p { font-size: 15px; color: var(--ink-2); }
+@media (max-width: 860px) { .proj-grid { grid-template-columns: 1fr; } }
+
+/* job form */
+.job { display: grid; grid-template-columns: 1fr 1.3fr; gap: 0; }
+.job-side { padding: 32px; border-right: 1.5px solid var(--ink); display: grid; gap: 16px; align-content: start; background: var(--ink); color: var(--sheet); }
+.job-side p { color: #c9d0da; }
+.job-side .phone { font-size: 36px; font-stretch: 72%; font-weight: 750; text-decoration: none; font-variant-numeric: tabular-nums; }
+form { padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: grid; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+label { font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+input, select, textarea { font: inherit; font-size: 16px; padding: 11px 12px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink); border-radius: 0; width: 100%; }
+textarea { min-height: 96px; resize: vertical; }
+.drop { border: 1.5px dashed var(--ink-2); padding: 18px; text-align: center; font-size: 15px; color: var(--ink-2); background: var(--paper); }
+.form-note { grid-column: 1 / -1; font-size: 13px; color: var(--ink-2); }
+.sent { grid-column: 1/-1; color: var(--ink); font-weight: 600; }
+@media (max-width: 860px) { .job { grid-template-columns: 1fr; } .job-side { border-right: 0; border-bottom: 1.5px solid var(--ink); } form { grid-template-columns: 1fr; padding: 22px; } .job-side { padding: 22px; } }
+
+/* title block footer */
+footer { padding-block: 40px 110px; }
+.tblock { display: grid; grid-template-columns: 2fr repeat(4, 1fr); }
+.tblock > div { padding: 14px 16px; border-right: 1px solid var(--ink); display: grid; gap: 6px; align-content: start; font-size: 14px; }
+.tblock > div:last-child { border-right: 0; }
+.tblock .mono { color: var(--ink-2); font-size: 10px; }
+.tblock a { text-decoration: none; }
+@media (max-width: 860px) { .tblock { grid-template-columns: 1fr 1fr; } .tblock > div { border-bottom: 1px solid var(--ink); } .tblock > div:first-child { grid-column: 1/-1; border-right: 0; } }
+
+.callbar { display: none; }
+@media (max-width: 760px) {
+  .wrap { padding-inline: 16px; }
+  section { padding-block: 56px; }
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--sheet); border-top: 1.5px solid var(--ink); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .callbar a { padding: 15px 8px; text-align: center; font-weight: 600; text-decoration: none; }
+  .callbar a:first-child { background: var(--ink); color: var(--sheet); }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><i>SG</i>The Sign Guyz</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#trade">For Sign Companies</a>
+      <a href="#pm">For Property Managers</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn" href="tel:+19054299860">(905) 429-9860</a>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="hero-copy">
+    <p class="mono" style="color:var(--ink-2)">Sheet 01 · Durham Region, Ontario</p>
+    <div class="dim" data-dim="INSTALL · SERVICE · CRANE"><span class="tick l"></span><span class="tick r"></span>
+      <h1>The install and service partner for sign companies.</h1>
+    </div>
+    <p class="lede">You sell it and build it. We survey it, lift it, wire it and send you the photos. Commercial property managers call us for repairs, changeovers and maintenance.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#job">Send us a job</a>
+      <a class="btn ghost" href="#pm">Property manager? Book a sign check</a>
+    </div>
+  </div>
+  <div class="ph" data-shot="Boom lifting a channel-letter raceway to a 2nd-storey fascia" role="img" aria-label="Placeholder: crane lifting channel letters"></div>
+</div>
+
+<div class="wrap">
+  <div class="sheet spec">
+    <div><span class="mono">In the trade</span><strong><span class="tbc">XX</span> yrs</strong></div>
+    <div><span class="mono">Installs completed</span><strong><span class="tbc">XXXX</span>+</strong></div>
+    <div><span class="mono">Boom reach</span><strong><span class="tbc">XX</span> ft</strong></div>
+    <div><span class="mono">Coverage</span><strong>WSIB · <span class="tbc">$XM</span> CGL</strong></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="sec-head"><span class="mono">A · Who we work for</span><h2>Two kinds of client. Two different promises.</h2></div>
+  <div class="doors">
+    <article class="sheet door" id="trade">
+      <header><span class="mono">A1 · Trade</span><span class="mono" style="color:var(--ink-2)">~ most of our work</span></header>
+      <h3>For sign companies</h3>
+      <table>
+        <tr><td>A1.1</td><td>White-label installation and fabrication</td></tr>
+        <tr><td>A1.2</td><td>Crane and boom work, removals, repairs</td></tr>
+        <tr><td>A1.3</td><td>LED retrofits and illuminated repair</td></tr>
+        <tr><td>A1.4</td><td>Site surveys and permit applications</td></tr>
+      </table>
+      <a class="btn" href="#job" style="justify-self:start">Send us a job</a>
+    </article>
+    <article class="sheet door" id="pm">
+      <header><span class="mono">A2 · Direct</span><span class="mono" style="color:var(--ink-2)">service only</span></header>
+      <h3>For property managers</h3>
+      <table>
+        <tr><td>A2.1</td><td>Repairs, lighting outages, emergency make-safe</td></tr>
+        <tr><td>A2.2</td><td>Tenant changeovers: remove, patch fascia, install</td></tr>
+        <tr><td>A2.3</td><td>Pylon and directory panel updates</td></tr>
+        <tr><td>A2.4</td><td>Annual maintenance plans, 3 tiers</td></tr>
+      </table>
+      <a class="btn ghost" href="#" style="justify-self:start">Request a free sign condition check</a>
+    </article>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sheet promise">
+    <p class="note">Note to partners: this is a condition of every trade job, not a policy we might change.</p>
+    <p class="mono" style="color:var(--ink-2);margin-bottom:16px">B · The white-label promise</p>
+    <p class="big">We install under your brand. We <span class="ring">never contact or sell</span> to your customers.</p>
+    <div class="fine">
+      <p>Your customer gets your name, your card and your follow-up. Questions on site go back to you.</p>
+      <p>When a property owner asks us for a new sign, we refer them to a partner shop and install what they build.</p>
+      <p>Certificates of insurance and WSIB clearance sent on request, before the first job.</p>
+    </div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="sec-head"><span class="mono">C · Sequence</span><h2>How a trade job runs</h2></div>
+  <ol class="sheet seq">
+    <li><h3>Drawings in</h3><p>Approved drawings, site address and permit status. Scope and price confirmed within <span class="tbc">1 business day</span>.</p></li>
+    <li><h3>Site survey</h3><p>Wall, power, access and lift position checked. Problems flagged to you before install day.</p></li>
+    <li><h3>Scheduled install</h3><p>Booked around your customer and the site. Our crane, our crew, our insurance.</p></li>
+    <li><h3>Photo report</h3><p>Before, during and after photos sent to you, unbranded and ready to forward.</p></li>
+  </ol>
+</section>
+
+<section class="wrap" id="services" style="padding-top:0">
+  <div class="sec-head"><span class="mono">D · Schedule of services</span><h2>Services</h2></div>
+  <div class="sheet scroll">
+    <table class="schedule">
+      <thead><tr><th>Ref</th><th>Service</th><th>Scope</th><th>Trade</th><th>Direct</th></tr></thead>
+      <tbody>
+        <tr><td>D.01</td><td><strong>Installation</strong></td><td>Channel letters, cabinets, fascia panels, blades, wayfinding</td><td><span class="dot on" aria-label="yes"></span></td><td><span class="dot on" aria-label="yes"></span></td></tr>
+        <tr><td>D.02</td><td><strong>Repair &amp; emergency</strong></td><td>Storm damage, hanging faces, dead lighting, make-safe</td><td><span class="dot on" aria-label="yes"></span></td><td><span class="dot on" aria-label="yes"></span></td></tr>
+        <tr><td>D.03</td><td><strong>Crane &amp; rigging</strong></td><td>Boom truck lifts for pylons, high fascia, rooftop</td><td><span class="dot on" aria-label="yes"></span></td><td><span class="dot" aria-label="no"></span></td></tr>
+        <tr><td>D.04</td><td><strong>Removals &amp; changeovers</strong></td><td>Remove, patch and seal fascia, install new tenant sign</td><td><span class="dot on" aria-label="yes"></span></td><td><span class="dot on" aria-label="yes"></span></td></tr>
+        <tr><td>D.05</td><td><strong>LED retrofits</strong></td><td>Neon and fluorescent cabinets converted to LED</td><td><span class="dot on" aria-label="yes"></span></td><td><span class="dot on" aria-label="yes"></span></td></tr>
+        <tr><td>D.06</td><td><strong>Pylon &amp; monument</strong></td><td>New pylons, faces, directory panels, footings</td><td><span class="dot on" aria-label="yes"></span></td><td><span class="dot on" aria-label="yes"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="wrap" id="projects" style="padding-top:0">
+  <div class="sec-head"><span class="mono">E · Project record</span><h2>Recent work, by town and job type</h2></div>
+  <div class="proj-grid">
+    <article class="sheet proj"><div class="ph" data-shot="Pylon cabinet being set, dusk" role="img" aria-label="Placeholder: pylon install"></div><div class="cap"><span class="mono">Crane &amp; rigging · Oshawa</span><h3>Pylon install, Oshawa plaza</h3><p>Old pylon cut down, new double-sided cabinet set in one morning. Plaza stayed open.</p></div></article>
+    <article class="sheet proj"><div class="ph" data-shot="Channel letters lit after LED retrofit" role="img" aria-label="Placeholder: LED retrofit"></div><div class="cap"><span class="mono">LED retrofit · Whitby</span><h3>Channel letter retrofit</h3><p>Failing neon replaced with LED modules and a new power supply.</p></div></article>
+    <article class="sheet proj"><div class="ph" data-shot="Fascia patched after sign removal" role="img" aria-label="Placeholder: tenant changeover"></div><div class="cap"><span class="mono">Changeover · Ajax</span><h3>Tenant changeover</h3><p>Old letters off, fascia patched and painted, new sign up in two days.</p></div></article>
+  </div>
+</section>
+
+<section class="wrap" id="job" style="padding-top:0">
+  <div class="sec-head"><span class="mono">F · Submittal</span><h2>Send us a job</h2></div>
+  <div class="sheet job">
+    <div class="job-side" id="about">
+      <span class="mono" style="color:#9fb0c6">Direct line to Andrew</span>
+      <a class="phone" href="tel:+19054299860">(905) 429-9860</a>
+      <p>Andrew@TheSignGuyz.ca<br>Mon–Fri, 9–5</p>
+      <p>Andrew quotes the job and is on site when it goes up. Based in Whitby, working across Durham Region and the east GTA.</p>
+    </div>
+    <form id="jobform">
+      <div class="field"><label for="f-co">Your company</label><input id="f-co" placeholder="e.g. Example Signs Inc."></div>
+      <div class="field"><label for="f-name">Contact name</label><input id="f-name"></div>
+      <div class="field"><label for="f-town">Site town</label><select id="f-town"><option>Whitby</option><option>Oshawa</option><option>Ajax</option><option>Pickering</option><option>Clarington</option><option>Other</option></select></div>
+      <div class="field"><label for="f-type">Job type</label><select id="f-type"><option>Installation</option><option>Crane / boom lift</option><option>Removal</option><option>Repair / service</option><option>LED retrofit</option><option>Site survey</option></select></div>
+      <div class="field full"><label for="f-notes">Scope and timing</label><textarea id="f-notes" placeholder="Size, mounting height, power, target date"></textarea></div>
+      <div class="field full"><label for="f-files">Drawings and site photos</label><div class="drop"><input id="f-files" type="file" multiple accept="image/*,.pdf" style="border:0;background:none;padding:0"></div></div>
+      <button class="btn" type="submit">Send job details</button>
+      <p class="form-note">Mockup form: nothing is sent.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="sheet tblock">
+    <div><span class="mono">Project</span><strong style="font-size:20px;font-stretch:72%">THE SIGN GUYZ</strong><span>Installation and service partner for sign companies and commercial properties.</span></div>
+    <div><span class="mono">Phone</span><a href="tel:+19054299860">(905) 429-9860</a></div>
+    <div><span class="mono">Email</span><a href="mailto:Andrew@TheSignGuyz.ca">Andrew@TheSignGuyz.ca</a></div>
+    <div><span class="mono">Service area</span><span>Whitby · Oshawa · Ajax · Pickering · Clarington</span></div>
+    <div><span class="mono">Rev / Social</span><span>2026 · <a href="https://instagram.com/thesignguyz_andrew">Instagram</a></span></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a href="tel:+19054299860">Call Andrew</a>
+  <a href="#job">Send a job</a>
+</nav>
+
+<script>
+document.getElementById('jobform').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var p = document.createElement('p'); p.className = 'sent'; p.textContent = 'Mockup only: in the real site this goes to Andrew with your files attached.';
+  this.appendChild(p);
+});
+</script>
+</body>
+</html>
