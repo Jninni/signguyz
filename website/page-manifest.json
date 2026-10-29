@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "",
+    "label": "Home",
+    "description": "Storefront sign installation, repairs and service in Whitby and Durham Region. Our owner manages the work on site, with 20+ years of experience and $5M insurance."
+  },
+  {
+    "slug": "property-managers",
+    "label": "Property managers",
+    "description": "Commercial sign service for property managers in Whitby and Durham. Repairs, tenant changeovers and inspections with owner oversight and an owned bucket truck fleet."
+  },
+  {
+    "slug": "business-owners",
+    "label": "Business owners & tenants",
+    "description": "New storefront signs in Whitby, Durham and beyond. The Sign Guyz manages fabrication, installation and specialist trades, with service after installation."
+  },
+  {
+    "slug": "sign-companies",
+    "label": "Sign companies",
+    "description": "Trade sign installation in Whitby and Durham for sign companies. Surveys, removals and service under your brand, with an owned fleet of bucket trucks."
+  },
+  {
+    "slug": "services",
+    "label": "Services",
+    "description": "Explore sign repair, illuminated sign service, removals, maintenance and trade installation in Durham Region."
+  },
+  {
+    "slug": "services/storefront-signs",
+    "label": "New storefront signs & installation",
+    "description": "Complete storefront sign projects from planning and fabrication to installation. Based in Whitby, serving Durham and projects farther afield."
+  },
+  {
+    "slug": "services/sign-repair",
+    "label": "Sign repair",
+    "description": "Commercial sign repair in Durham Region for damaged panels, loose parts and signs that need attention. Share a photo and discuss the next step."
+  },
+  {
+    "slug": "services/illuminated-signs",
+    "label": "Lighting faults & LED upgrades",
+    "description": "Illuminated sign repair and LED upgrade enquiries in Durham Region. Help for dark letters, flickering lighting and ageing sign cabinets."
+  },
+  {
+    "slug": "services/tenant-changeovers",
+    "label": "Removals & tenant changeovers",
+    "description": "Commercial sign removals and tenant changeovers in Durham Region. Plan old sign removal, site access and installation with the incoming sign company."
+  },
+  {
+    "slug": "services/pylon-signs",
+    "label": "Pylon & directory sign service",
+    "description": "Pylon and directory sign service enquiries in Durham Region, including panel changes, lighting faults and removal planning."
+  },
+  {
+    "slug": "services/sign-maintenance",
+    "label": "Sign inspections & maintenance",
+    "description": "Sign inspections, service and maintenance around Whitby and Durham Region. Discuss the condition of your signs and arrange repairs with our team."
+  },
+  {
+    "slug": "services/trade-installation",
+    "label": "Trade sign installation",
+    "description": "Trade sign installation in Durham Region for sign companies. Discuss approved drawings, site access, lift requirements and scheduling with our team."
+  },
+  {
+    "slug": "services/site-surveys",
+    "label": "Site surveys & access planning",
+    "description": "Sign site survey enquiries in Durham Region for sign companies. Discuss measurements, photos, fixing conditions and access before installation."
+  },
+  {
+    "slug": "about",
+    "label": "About us",
+    "description": "Get to know The Sign Guyz. More than 20 years of sign experience, $5 million insurance and personal sign-off on every job."
+  },
+  {
+    "slug": "projects",
+    "label": "Our work",
+    "description": "Explore building signs, storefront signage, property signs and installation work from The Sign Guyz photo portfolio."
+  },
+  {
+    "slug": "contact",
+    "label": "Contact",
+    "description": "Contact The Sign Guyz in Whitby about sign repair, maintenance or trade installation in Durham Region. Call or email our team to discuss your job."
+  }
+]

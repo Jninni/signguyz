@@ -1,0 +1,13 @@
+{
+  "name": "signguyz-website",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs && node check.mjs",
+    "check": "node check.mjs",
+    "dev": "node serve.mjs"
+  }
+}
