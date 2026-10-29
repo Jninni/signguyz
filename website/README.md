@@ -7,7 +7,7 @@ https://signguyz-design-review.basicraven256.chatgpt.site/?skin=branded
 
 Import Jninni/signguyz. Set Root Directory to `website`, Framework Preset to Other, and select the branch containing this directory. Configuration in vercel.json builds with `npm run build` and publishes `dist`.
 
-No runtime packages, storage account or database are required. Node 22 or newer is supported. Run `node build.mjs`, `node check.mjs`, then `node serve.mjs` for local preview.
+No runtime packages, storage account or database are required. Enquiry email requires a Resend account and server environment variables. Node 22 or newer is supported. Run `node build.mjs`, `node check.mjs`, then `node serve.mjs` for local preview.
 
 Set SITE_URL to the final canonical origin (currently defaults to https://thesignguyz.ca). SITE_INDEXABLE defaults to false. Keep false during review; set true only for the production environment after the domain is connected and launch checks are complete. Vercel preview builds remain noindex regardless of that setting. Rebuild after environment changes.
 
@@ -24,13 +24,13 @@ For photo updates: select an approved original in Drive, export an appropriately
 ## Launch checklist
 
 - Approve final content, logo and photos.
-- Connect and test enquiry delivery. Forms currently preview locally and do not send anything; phone and email links work.
+- Connect and test enquiry delivery. The Resend integration is implemented; configure it and verify receipt at both destinations before launch. See RESEND-SETUP.md.
 - Confirm final domain, canonical URLs, redirects from old URLs, and live sitemap.
 - Enable production indexing and submit sitemap in Google Search Console and Bing Webmaster Tools.
 - Configure analytics/advertising only when account details and consent requirements are agreed.
 - At final launch, decide how to noindex or retire the separate review site without breaking stakeholder access.
 
-No form values or uploads are sent or saved by the current site. WSIB and weekend/holiday response coverage remain unconfirmed.
+When Resend is configured, form details and attachments are emailed to contact@thesignguyz.ca and andrew@thesignguyz.ca. WSIB and weekend/holiday response coverage remain unconfirmed.
 
 ## Current brief
 
