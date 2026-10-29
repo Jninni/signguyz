@@ -13,7 +13,7 @@ export const pageMeta={
  'services/trade-installation':['Trade Sign Installation for Sign Companies | Durham','Trade sign installation under your brand in Whitby and Durham. An owned bucket truck fleet, agreed site arrangements and protection of your customer relationship.','sign-work.webp'],
  'services/site-surveys':['Sign Site Surveys & Access Planning | Durham','Sign site surveys in Whitby and Durham for sign companies. Agree measurements, site photos and access information before design, pricing or installation.','work-7.webp'],
  'projects':['Sign Installation Portfolio | The Sign Guyz','See storefront, building, property and wayfinding sign work carried out for sign company partners and direct customers by The Sign Guyz.','work-7.webp'],
- 'about':['About The Sign Guyz | Owner on Site for Every Job','Meet The Sign Guyz: more than 20 years of owner experience, an owned bucket truck fleet and $5M insurance. Sign installation and service based in Whitby.','sign-work.webp'],
+ 'about':['About The Sign Guyz | Our owners are always onsite','Meet The Sign Guyz: more than 20 years of owner experience, an owned bucket truck fleet and $5M insurance. Sign installation and service based in Whitby.','sign-work.webp'],
  'contact':['Contact The Sign Guyz | Whitby & Durham Sign Work','Call 905-429-9860 or email The Sign Guyz about new signs, installation and service in Whitby and Durham. Usually a same-day response, typically within 24 hours.','work-5.webp']
 };
 export function metadata(p){const row=pageMeta[p.slug];return {title:row[0],description:row[1]||p.description,image:row[2]};}
