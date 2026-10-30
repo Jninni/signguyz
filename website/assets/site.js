@@ -26,17 +26,26 @@ for(const form of document.querySelectorAll('.enquiry')){
  const upload=form.querySelector('[type=file]');
  upload.addEventListener('change',()=>{
   const files=Array.from(upload.files);
-  const valid=files.length<=5&&files.reduce((n,f)=>n+f.size,0)<=10*1024*1024&&files.every(f=>f.type.startsWith('image/')||f.type==='application/pdf');
-  upload.setCustomValidity(valid?'':'Choose up to 5 images or PDFs, totalling no more than 10 MB.');
-  form.querySelector('.file-status').textContent=valid?(files.length?files.length+' file(s) selected. Files stay on your device.':''):'Choose up to 5 images or PDFs, totalling no more than 10 MB.';
+  const valid=files.length<=5&&files.reduce((n,f)=>n+f.size,0)<=3*1024*1024&&files.every(f=>['image/jpeg','image/png','image/webp','application/pdf'].includes(f.type));
+  upload.setCustomValidity(valid?'':'Choose up to 5 JPG, PNG, WebP or PDF files, totalling no more than 3 MB.');
+  form.querySelector('.file-status').textContent=valid?(files.length?files.length+' file(s) selected. ':''):'Choose up to 5 JPG, PNG, WebP or PDF files, totalling no more than 3 MB.';
  });
- form.addEventListener('submit',e=>{
-  e.preventDefault();
-  if(form.elements.website.value)return;
-  const status=form.querySelector('.form-status');const data=new FormData(form);
-  status.textContent='Enquiry preview: '+data.get('issue')+' in '+data.get('location')+'. Nothing has been sent. Please call or email our team to discuss the job.';
-  status.classList.add('success');status.focus();
-  event('enquiry_preview',{audience:form.dataset.audience,message_variant:variant});
+ let requestId=crypto.randomUUID();
+ const encodeFile=file=>new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve({name:file.name,content:String(reader.result).split(',')[1]});reader.onerror=()=>reject(Error('Unable to read an attachment. Please choose the files again.'));reader.readAsDataURL(file);});
+ form.addEventListener('submit',async e=>{
+  e.preventDefault();if(!form.reportValidity()||form.elements.website.value)return;
+  const status=form.querySelector('.form-status'),button=form.querySelector('[type=submit]');
+  if(button.disabled)return;
+  const label=button.innerHTML;button.disabled=true;button.textContent='Sending…';status.classList.remove('success');status.textContent='Sending your enquiry…';
+  try{
+   const payload=Object.fromEntries(new FormData(form));payload.landing_page=attribution.landing_page;payload.files=await Promise.all(Array.from(upload.files).map(encodeFile));payload.request_id=requestId;
+   const response=await fetch('/api/enquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:AbortSignal.timeout(25000)});
+   const result=await response.json();if(!response.ok||!result.ok)throw Error(result.message||'Unable to send. Please try again or call our team.');
+   status.textContent=result.message;status.classList.add('success');event('enquiry_submitted',{audience:form.dataset.audience,message_variant:variant});
+   form.reset();requestId=crypto.randomUUID();upload.setCustomValidity('');form.querySelector('.file-status').textContent='';
+   form.querySelector('[name=contact_method]:checked').dispatchEvent(new Event('change'));
+  }catch(error){status.textContent=error.name==='TimeoutError'?'We could not confirm submission. Please retry the same enquiry, or call (905) 429-9860.':error.message==='Failed to fetch'?'Connection failed. Please try again or call (905) 429-9860.':error.message;}
+  finally{button.disabled=false;button.innerHTML=label;status.focus();}
  });
 }
 for(const a of document.querySelectorAll('a[href^="tel:"],a[href^="mailto:"]'))a.addEventListener('click',()=>event(a.protocol==='tel:'?'phone_click':'email_click',{message_variant:variant}));
