@@ -7,7 +7,7 @@ function clean(value,max,required=false){if(typeof value!=='string'||value.lengt
 export function prepare(body,from){
  if(!body||typeof body!=='object'||Array.isArray(body))throw Error('Invalid form.');
  const name=clean(body.name,100,true), company=clean(body.company||'',140),location=clean(body.location,180,true),issue=clean(body.issue,120,true),details=clean(body.details,3000,true);
- const audience=clean(body.audience,40,true);if(!['business-owners','property-managers','sign-companies'].includes(audience))throw Error('Choose who you are enquiring for.');
+ const audience=clean(body.audience,40,true);if(!['business-owners','property-managers','sign-companies','other'].includes(audience))throw Error('Choose who you are enquiring for.');
  if(audience==='sign-companies'&&!company)throw Error('Enter your sign company.');
  const method=body.contact_method;if(!['email','phone'].includes(method))throw Error('Choose a contact method.');
  const contact=clean(body[method],method==='email'?180:35,true);
