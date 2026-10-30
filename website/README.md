@@ -19,7 +19,7 @@ The `/projects/` (Our work) page shows approved project photos from the Signguyz
 
 `assets/` contains only prepared website images and shared browser files. `assets/image-manifest.json` records dimensions, source filenames, sizes and approval context. Original photos remain in Google Drive; do not commit raw photo libraries, client documents or full branding boards.
 
-The Balanced Z in `assets/logo-balanced.svg` is a standalone SVG viewport containing compressed raster artwork from the approved identity board. It is NOT a traced vector or transparent print master. The favicon uses the same approved symbol. Obtain a proper vector master before print or large-format use. No letter shapes have been redesigned for the website.
+The website logo embeds only the extracted primary wordmark. Standalone raster brand components are in assets/brand/. The favicon embeds only the Z brandmark. These are raster extractions, not print-ready vector masters.
 
 For photo updates: select an approved original in Drive, export an appropriately sized WebP (typically no more than 1600px wide for current placements), strip camera metadata, record the asset in the manifest, and update references/alt text in content.mjs, enhancements.mjs, seo.mjs or build.mjs. Run build and checks, review desktop/mobile, then open a pull request. The build copies assets into dist. Git tracks prepared assets; dist is generated and ignored.
 
