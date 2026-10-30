@@ -18,5 +18,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/enquiry.js": {
+      "maxDuration": 30
+    }
+  }
 }

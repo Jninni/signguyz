@@ -61,3 +61,5 @@ html[data-skin=branded]{--bg:#f7f4ee;--surface:#fffefa;--ink:#16171a;--muted:#60
 
 /* Standalone approved Balanced wordmark; no presentation-board positioning. */
 [data-skin=branded] .brand-logo img{position:static;display:block;width:100%;height:auto;max-width:100%;mix-blend-mode:multiply}
+
+.enquiry-confirmation{box-sizing:border-box;width:min(640px,calc(100% - 32px));max-height:85vh;overflow:auto;border:0;border-top:5px solid #e1251b;background:#f7f4ee;color:#16171a;padding:28px}.enquiry-confirmation::backdrop{background:#000a}.enquiry-confirmation h2{font-size:32px;margin:0 0 16px}.enquiry-confirmation dt{font-weight:700;margin-top:14px}.enquiry-confirmation dd{margin:4px 0;white-space:pre-wrap;overflow-wrap:anywhere}.enquiry-confirmation .button{background:#e1251b;color:white;margin-top:20px}

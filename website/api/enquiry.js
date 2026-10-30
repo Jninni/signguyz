@@ -10,6 +10,7 @@ export function prepare(body,from){
  const audience=clean(body.audience,40,true);if(!['business-owners','property-managers','sign-companies','other'].includes(audience))throw Error('Choose who you are enquiring for.');
  if(audience==='sign-companies'&&!company)throw Error('Enter your sign company.');
  const method=body.contact_method;if(!['email','phone'].includes(method))throw Error('Choose a contact method.');
+ const customerEmail=clean(body.email,180,true);if(!email.test(customerEmail))throw Error('Enter a valid email for your receipt.');
  const contact=clean(body[method],method==='email'?180:35,true);
  if(method==='email'&&!email.test(contact)||method==='phone'&&!/^[+()\d .-]{7,35}$/.test(contact))throw Error('Enter a valid contact detail.');
  const date=clean(body.target_date||'',10);if(date&&!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error('Check the target date.');
@@ -23,11 +24,11 @@ export function prepare(body,from){
   return {filename:`${i+1}-${stem}.${ext}`,content:f.content};
  });
  const page=clean(body.landing_page||'',300);
- const text=[`Name: ${name}`,`Company: ${company||'Not supplied'}`,`Customer group: ${audience}`,`Preferred contact: ${method}`,`Contact: ${contact}`,`Site location: ${location}`,`Service: ${issue}`,`Target date: ${date||'Not supplied'}`,`Discuss aftercare: ${body.aftercare==='yes'?'Yes':'No'}`,`\nProject details:\n${details}`,`\nWebsite page: ${page}`].join('\n');
- return {from,to:TO,subject:`Website enquiry: ${issue.replace(/[\r\n]/g,' ')} (${location.replace(/[\r\n]/g,' ')})`,text,...(method==='email'?{reply_to:contact}:{}),...(attachments.length?{attachments}:{})};
+ const text=[`Name: ${name}`,`Company: ${company||'Not supplied'}`,`Customer group: ${audience}`,`Preferred contact: ${method}`,`Contact: ${contact}`,`Receipt email: ${customerEmail}`,`Site location: ${location}`,`Service: ${issue}`,`Target date: ${date||'Not supplied'}`,`Discuss aftercare: ${body.aftercare==='yes'?'Yes':'No'}`,`\nProject details:\n${details}`,`\nWebsite page: ${page}`].join('\n');
+ return {from,to:TO,subject:`Website enquiry: ${issue.replace(/[\r\n]/g,' ')} (${location.replace(/[\r\n]/g,' ')})`,text,reply_to:customerEmail,...(attachments.length?{attachments}:{})};
 }
 export function makeHandler({env=process.env,send=fetch,now=Date.now}={}){return async(req,res)=>{
- const reply=(code,message)=>res.status(code).json({ok:code===200,message});res.setHeader('Cache-Control','no-store');
+ const reply=(code,message,extra={})=>res.status(code).json({ok:code===200,message,...extra});res.setHeader('Cache-Control','no-store');
  if(req.method!=='POST'){res.setHeader('Allow','POST');return reply(405,'Use the enquiry form.');}
  const origins=(env.ENQUIRY_ALLOWED_ORIGINS||env.SITE_URL||'https://thesignguyz.ca').split(',').map(x=>x.trim().replace(/\/$/,''));
  if(!origins.includes(req.headers.origin))return reply(403,'Please submit from our website.');
@@ -45,7 +46,13 @@ export function makeHandler({env=process.env,send=fetch,now=Date.now}={}){return
  try{
   const response=await send('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':`enquiry-${key}-${digest}`},body:JSON.stringify(message),signal:AbortSignal.timeout(15000)});
   const result=await response.json();if(!response.ok||!result.id)return reply(502,'We could not confirm submission. Please try again, or call (905) 429-9860.');
-  return reply(200,'Thank you. Your enquiry has been submitted to our team. We usually respond the same day, typically within 24 hours.');
+  const reference='SG-'+key.slice(0,8).toUpperCase();
+  const confirmation='Thank you for your enquiry. Your submission has been received, and you can expect a response in less than 24 hours.';
+  const summary={reference,name:body.name.trim(),service:body.issue.trim(),location:body.location.trim(),details:body.details.trim(),email:body.email.trim(),contactMethod:body.contact_method,phone:body.contact_method==='phone'?body.phone.trim():'',attachments:message.attachments?.length||0};
+  const receipt={from:env.RESEND_FROM,to:[summary.email],reply_to:'contact@thesignguyz.ca',subject:'Your enquiry has been received | The Sign Guyz | '+reference,text:[confirmation,'','Reference: '+reference,'Name: '+summary.name,'Service: '+summary.service,'Location: '+summary.location,'Preferred response: '+summary.contactMethod,(summary.phone?'Phone: '+summary.phone:''),'','Your enquiry:',summary.details,'','Attachments received: '+summary.attachments,'','If you need to add anything, reply to this email or call (905) 429-9860.','The Sign Guyz'].filter(x=>x!==undefined).join('\n')};
+  let receiptSent=false;
+  try{const receiptResponse=await send('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':`receipt-${key}-${digest}`},body:JSON.stringify(receipt),signal:AbortSignal.timeout(10000)});const receiptResult=await receiptResponse.json();receiptSent=receiptResponse.ok&&Boolean(receiptResult.id);}catch{}
+  return reply(200,confirmation,{summary,receiptSent});
  }catch{return reply(502,'We could not confirm submission. Please retry the same enquiry, or call (905) 429-9860.');}
 };}
 export default makeHandler();
