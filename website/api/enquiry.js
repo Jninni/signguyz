@@ -34,7 +34,7 @@ export function makeHandler({env=process.env,send=fetch,now=Date.now}={}){return
  if(!origins.includes(req.headers.origin))return reply(403,'Please submit from our website.');
  if(!String(req.headers['content-type']||'').startsWith('application/json'))return reply(415,'Invalid form format.');
  if(Number(req.headers['content-length']||0)>4300000)return reply(413,'Attachments must total 3 MB or less.');
- if(!env.RESEND_API_KEY||!env.RESEND_FROM)return reply(503,'Online enquiries are temporarily unavailable. Please call (905) 429-9860 or email contact@thesignguyz.ca.');
+ if(!env.RESEND_API_KEY||!env.RESEND_FROM)return reply(503,'Online enquiries are temporarily unavailable. Please email Contact@thesignguyz.ca.');
  let body=req.body;if(typeof body==='string'){try{body=JSON.parse(body);}catch{return reply(400,'Invalid form.');}}
  if(body?.website)return reply(400,'Unable to submit this enquiry.');
  const ip=createHash('sha256').update(String(req.headers['x-vercel-forwarded-for']||req.headers['x-forwarded-for']||'unknown').split(',')[0]).digest('hex');
@@ -45,14 +45,14 @@ export function makeHandler({env=process.env,send=fetch,now=Date.now}={}){return
  const digest=createHash('sha256').update(JSON.stringify(message)).digest('hex');
  try{
   const response=await send('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':`enquiry-${key}-${digest}`},body:JSON.stringify(message),signal:AbortSignal.timeout(15000)});
-  const result=await response.json();if(!response.ok||!result.id)return reply(502,'We could not confirm submission. Please try again, or call (905) 429-9860.');
+  const result=await response.json();if(!response.ok||!result.id)return reply(502,'We could not confirm submission. Please try again, or email Contact@thesignguyz.ca.');
   const reference='SG-'+key.slice(0,8).toUpperCase();
   const confirmation='Thank you for your enquiry. Your submission has been received, and you can expect a response in less than 24 hours.';
   const summary={reference,name:body.name.trim(),service:body.issue.trim(),location:body.location.trim(),details:body.details.trim(),email:body.email.trim(),contactMethod:body.contact_method,phone:body.contact_method==='phone'?body.phone.trim():'',attachments:message.attachments?.length||0};
-  const receipt={...(message.attachments?.length?{attachments:message.attachments}:{}),from:env.RESEND_FROM,to:[summary.email],reply_to:'contact@thesignguyz.ca',subject:'Your enquiry has been received | The Sign Guyz | '+reference,text:[confirmation,'','Reference: '+reference,'Name: '+summary.name,'Service: '+summary.service,'Location: '+summary.location,'Preferred response: '+summary.contactMethod,(summary.phone?'Phone: '+summary.phone:''),'','Your enquiry:',summary.details,'','Attachments received: '+summary.attachments,'','If you need to add anything, reply to this email or call (905) 429-9860.','The Sign Guyz'].filter(x=>x!==undefined).join('\n')};
+  const receipt={...(message.attachments?.length?{attachments:message.attachments}:{}),from:env.RESEND_FROM,to:[summary.email],reply_to:'contact@thesignguyz.ca',subject:'Your enquiry has been received | The Sign Guyz | '+reference,text:[confirmation,'','Reference: '+reference,'Name: '+summary.name,'Service: '+summary.service,'Location: '+summary.location,'Preferred response: '+summary.contactMethod,(summary.phone?'Phone: '+summary.phone:''),'','Your enquiry:',summary.details,'','Attachments received: '+summary.attachments,'','If you need to add anything, reply to this email or email Contact@thesignguyz.ca.','The Sign Guyz'].filter(x=>x!==undefined).join('\n')};
   let receiptSent=false;
   try{const receiptResponse=await send('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':`receipt-${key}-${digest}`},body:JSON.stringify(receipt),signal:AbortSignal.timeout(10000)});const receiptResult=await receiptResponse.json();receiptSent=receiptResponse.ok&&Boolean(receiptResult.id);}catch{}
   return reply(200,confirmation,{summary,receiptSent});
- }catch{return reply(502,'We could not confirm submission. Please retry the same enquiry, or call (905) 429-9860.');}
+ }catch{return reply(502,'We could not confirm submission. Please retry the same enquiry, or email Contact@thesignguyz.ca.');}
 };}
 export default makeHandler();

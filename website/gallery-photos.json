@@ -4,489 +4,700 @@
     "thumb": "project-001-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Storefront restaurant sign above a glass entrance"
+    "alt": "Storefront restaurant sign above a glass entrance",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-002.webp",
     "thumb": "project-002-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Blue fascia sign on a corner commercial building"
+    "alt": "Blue fascia sign on a corner commercial building",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-003.webp",
     "thumb": "project-003-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Red restaurant sign on a stone building"
+    "alt": "Red restaurant sign on a stone building",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-004.webp",
     "thumb": "project-004-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Indoor hockey wall graphic"
+    "alt": "Indoor hockey wall graphic",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-005.webp",
     "thumb": "project-005-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Shopping plaza pylon with multiple tenant panels"
+    "alt": "Shopping plaza pylon with multiple tenant panels",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-006.webp",
     "thumb": "project-006-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Freestanding business sign panel"
+    "alt": "Freestanding business sign panel",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-007.webp",
     "thumb": "project-007-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Hockey wall graphic along a corridor"
+    "alt": "Hockey wall graphic along a corridor",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-008.webp",
     "thumb": "project-008-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Projecting sign on a brick storefront"
+    "alt": "Projecting sign on a brick storefront",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-009.webp",
     "thumb": "project-009-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Restaurant fascia and window graphics"
+    "alt": "Restaurant fascia and window graphics",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-010.webp",
     "thumb": "project-010-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Projecting sign on a red brick building"
+    "alt": "Projecting sign on a red brick building",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-011.webp",
     "thumb": "project-011-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Sandwich shop storefront sign"
+    "alt": "Sandwich shop storefront sign",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-012.webp",
     "thumb": "project-012-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Professional services directory sign"
+    "alt": "Professional services directory sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-013.webp",
     "thumb": "project-013-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Window graphics on a corner storefront"
+    "alt": "Window graphics on a corner storefront",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-014.webp",
     "thumb": "project-014-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Large building banner with a bucket truck on site"
+    "alt": "Large building banner with a bucket truck on site",
+    "categories": [
+      "Building signs",
+      "Installations"
+    ]
   },
   {
     "file": "project-015.webp",
     "thumb": "project-015-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Freestanding sign with an electronic message display"
+    "alt": "Freestanding sign with an electronic message display",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-016.webp",
     "thumb": "project-016-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Business park directory sign"
+    "alt": "Business park directory sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-017.webp",
     "thumb": "project-017-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Municipal site identification sign and digital display"
+    "alt": "Municipal site identification sign and digital display",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-018.webp",
     "thumb": "project-018-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Multi-tenant shopping plaza pylon"
+    "alt": "Multi-tenant shopping plaza pylon",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-019.webp",
     "thumb": "project-019-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Building name sign above a commercial entrance"
+    "alt": "Building name sign above a commercial entrance",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-020.webp",
     "thumb": "project-020-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Projecting salon banners on a corner building"
+    "alt": "Projecting salon banners on a corner building",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-021.webp",
     "thumb": "project-021-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Illuminated restaurant storefront sign"
+    "alt": "Illuminated restaurant storefront sign",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-022.webp",
     "thumb": "project-022-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Exit direction sign"
+    "alt": "Exit direction sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-023.webp",
     "thumb": "project-023-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Apartment property sign"
+    "alt": "Apartment property sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-024.webp",
     "thumb": "project-024-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Shop fascia and storefront window graphics"
+    "alt": "Shop fascia and storefront window graphics",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-025.webp",
     "thumb": "project-025-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Restaurant fascia and window graphics"
+    "alt": "Restaurant fascia and window graphics",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-026.webp",
     "thumb": "project-026-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Retail pylon beside a city street"
+    "alt": "Retail pylon beside a city street",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-027.webp",
     "thumb": "project-027-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Indoor sports wall graphic"
+    "alt": "Indoor sports wall graphic",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-028.webp",
     "thumb": "project-028-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Recreation entrance window graphics"
+    "alt": "Recreation entrance window graphics",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-029.webp",
     "thumb": "project-029-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Industrial building identification and drop-off signs"
+    "alt": "Industrial building identification and drop-off signs",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-030.webp",
     "thumb": "project-030-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Freestanding car wash sign"
+    "alt": "Freestanding car wash sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-031.webp",
     "thumb": "project-031-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Medical office fascia sign"
+    "alt": "Medical office fascia sign",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-032.webp",
     "thumb": "project-032-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Parking direction sign"
+    "alt": "Parking direction sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-033.webp",
     "thumb": "project-033-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Recreation entrance door graphic"
+    "alt": "Recreation entrance door graphic",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-034.webp",
     "thumb": "project-034-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Entrance direction sign"
+    "alt": "Entrance direction sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-035.webp",
     "thumb": "project-035-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Lighting store fascia sign"
+    "alt": "Lighting store fascia sign",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-036.webp",
     "thumb": "project-036-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Commercial building wall sign"
+    "alt": "Commercial building wall sign",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-037.webp",
     "thumb": "project-037-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Restaurant fascia on a corner building"
+    "alt": "Restaurant fascia on a corner building",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-038.webp",
     "thumb": "project-038-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Airport building lettering"
+    "alt": "Airport building lettering",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-039.webp",
     "thumb": "project-039-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Indoor recreation sign and entrance"
+    "alt": "Indoor recreation sign and entrance",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-040.webp",
     "thumb": "project-040-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Municipal wall sign"
+    "alt": "Municipal wall sign",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-041.webp",
     "thumb": "project-041-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Car wash sign above a garage bay"
+    "alt": "Car wash sign above a garage bay",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-042.webp",
     "thumb": "project-042-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Airport building fascia lettering"
+    "alt": "Airport building fascia lettering",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-043.webp",
     "thumb": "project-043-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Multi-panel automotive pylon sign"
+    "alt": "Multi-panel automotive pylon sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-044.webp",
     "thumb": "project-044-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Industrial building lettering"
+    "alt": "Industrial building lettering",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-045.webp",
     "thumb": "project-045-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Tall directory pylon"
+    "alt": "Tall directory pylon",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-046.webp",
     "thumb": "project-046-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Bucket lift beside a tall sign structure"
+    "alt": "Bucket lift beside a tall sign structure",
+    "categories": [
+      "Installations"
+    ]
   },
   {
     "file": "project-047.webp",
     "thumb": "project-047-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Dimensional industrial building lettering"
+    "alt": "Dimensional industrial building lettering",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-048.webp",
     "thumb": "project-048-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Freestanding lighting store sign"
+    "alt": "Freestanding lighting store sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-049.webp",
     "thumb": "project-049-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Industrial company wall sign"
+    "alt": "Industrial company wall sign",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-050.webp",
     "thumb": "project-050-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Illuminated car wash sign at night"
+    "alt": "Illuminated car wash sign at night",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-051.webp",
     "thumb": "project-051-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Multi-tenant directory pylon"
+    "alt": "Multi-tenant directory pylon",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-052.webp",
     "thumb": "project-052-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Illuminated channel lettering at night"
+    "alt": "Illuminated channel lettering at night",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-053.webp",
     "thumb": "project-053-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Indoor arena advertising sign"
+    "alt": "Indoor arena advertising sign",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-054.webp",
     "thumb": "project-054-thumb.webp",
     "width": 1440,
     "height": 810,
-    "alt": "Bucket truck at an airport signage installation"
+    "alt": "Bucket truck at an airport signage installation",
+    "categories": [
+      "Installations"
+    ]
   },
   {
     "file": "project-055.webp",
     "thumb": "project-055-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Restaurant sign above a food counter"
+    "alt": "Restaurant sign above a food counter",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-056.webp",
     "thumb": "project-056-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Salon fascia and window graphics"
+    "alt": "Salon fascia and window graphics",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-057.webp",
     "thumb": "project-057-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Restaurant fascia above a food counter"
+    "alt": "Restaurant fascia above a food counter",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-058.webp",
     "thumb": "project-058-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Sports team wall graphic"
+    "alt": "Sports team wall graphic",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-059.webp",
     "thumb": "project-059-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Diner fascia on a corner brick building"
+    "alt": "Diner fascia on a corner brick building",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-060.webp",
     "thumb": "project-060-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Training academy fascia sign"
+    "alt": "Training academy fascia sign",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-061.webp",
     "thumb": "project-061-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Restaurant sign on a brick storefront"
+    "alt": "Restaurant sign on a brick storefront",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-062.webp",
     "thumb": "project-062-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Decor centre fascia lettering"
+    "alt": "Decor centre fascia lettering",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-063.webp",
     "thumb": "project-063-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Illuminated interior business sign"
+    "alt": "Illuminated interior business sign",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-064.webp",
     "thumb": "project-064-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Illuminated retail fascia sign at night"
+    "alt": "Illuminated retail fascia sign at night",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-065.webp",
     "thumb": "project-065-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Dimensional hearing clinic lettering"
+    "alt": "Dimensional hearing clinic lettering",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-066.webp",
     "thumb": "project-066-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Outdoor graphics on a fence"
+    "alt": "Outdoor graphics on a fence",
+    "categories": [
+      "Building signs"
+    ]
   },
   {
     "file": "project-067.webp",
     "thumb": "project-067-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Professional office fascia on a brick building"
+    "alt": "Professional office fascia on a brick building",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-068.webp",
     "thumb": "project-068-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Fuel station pylon sign"
+    "alt": "Fuel station pylon sign",
+    "categories": [
+      "Property signs"
+    ]
   },
   {
     "file": "project-069.webp",
     "thumb": "project-069-thumb.webp",
     "width": 1600,
     "height": 1200,
-    "alt": "Pub fascia lettering"
+    "alt": "Pub fascia lettering",
+    "categories": [
+      "Storefront signs"
+    ]
   },
   {
     "file": "project-071.webp",
     "thumb": "project-071-thumb.webp",
     "width": 1200,
     "height": 1600,
-    "alt": "Garden centre retail fascia sign"
+    "alt": "Garden centre retail fascia sign",
+    "categories": [
+      "Storefront signs"
+    ]
   }
 ]
