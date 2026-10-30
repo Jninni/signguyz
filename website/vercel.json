@@ -23,5 +23,17 @@
     "api/enquiry.js": {
       "maxDuration": 30
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/gallery",
+      "destination": "/projects/",
+      "permanent": true
+    },
+    {
+      "source": "/gallery/",
+      "destination": "/projects/",
+      "permanent": true
+    }
+  ]
 }

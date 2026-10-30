@@ -15,7 +15,7 @@ Keep GoDaddy domain registration and email records. Add the domain in Vercel, th
 
 ## Images and branding
 
-The `/gallery/` page shows approved project photos from the Signguyz Drive Photos folder. `gallery-photos.json` controls order and descriptive alt text; `gallery-sources.json` records original Drive file IDs and filenames for future updates. `assets/gallery/` contains metadata-free WebP thumbnails and enlarged versions. Originals stay in Drive. This is a published snapshot, so new Drive photos need to be prepared and committed before appearing on the site. The promotional graphic and duplicate airport image are omitted. Gallery images open in a keyboard-accessible viewer, with direct image links when JavaScript is unavailable.
+The `/projects/` (Our work) page shows approved project photos from the Signguyz Drive Photos folder. `gallery-photos.json` controls order and descriptive alt text; `gallery-sources.json` records original Drive file IDs and filenames for future updates. `assets/gallery/` contains metadata-free WebP thumbnails and enlarged versions. Originals stay in Drive. This is a published snapshot, so new Drive photos need to be prepared and committed before appearing on the site. The promotional graphic and duplicate airport image are omitted. The former `/gallery/` URL permanently redirects to `/projects/`. Gallery images open in a keyboard-accessible viewer, with direct image links when JavaScript is unavailable.
 
 `assets/` contains only prepared website images and shared browser files. `assets/image-manifest.json` records dimensions, source filenames, sizes and approval context. Original photos remain in Google Drive; do not commit raw photo libraries, client documents or full branding boards.
 

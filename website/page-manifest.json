@@ -72,16 +72,11 @@
   {
     "slug": "projects",
     "label": "Our work",
-    "description": "Explore building signs, storefront signage, property signs and installation work from The Sign Guyz photo portfolio."
+    "description": "Explore storefront signs, building signage, property signs and installations for sign company partners and direct customers."
   },
   {
     "slug": "contact",
     "label": "Contact",
     "description": "Contact The Sign Guyz in Whitby about sign repair, maintenance or trade installation in Durham Region. Call or email our team to discuss your job."
-  },
-  {
-    "slug": "gallery",
-    "label": "Gallery",
-    "description": "Explore sign installations, storefront signage and project photos from The Sign Guyz."
   }
 ]
