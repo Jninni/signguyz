@@ -15,6 +15,8 @@ Keep GoDaddy domain registration and email records. Add the domain in Vercel, th
 
 ## Images and branding
 
+The `/gallery/` page shows approved project photos from the Signguyz Drive Photos folder. `gallery-photos.json` controls order and descriptive alt text; `gallery-sources.json` records original Drive file IDs and filenames for future updates. `assets/gallery/` contains metadata-free WebP thumbnails and enlarged versions. Originals stay in Drive. This is a published snapshot, so new Drive photos need to be prepared and committed before appearing on the site. The promotional graphic and duplicate airport image are omitted. Gallery images open in a keyboard-accessible viewer, with direct image links when JavaScript is unavailable.
+
 `assets/` contains only prepared website images and shared browser files. `assets/image-manifest.json` records dimensions, source filenames, sizes and approval context. Original photos remain in Google Drive; do not commit raw photo libraries, client documents or full branding boards.
 
 The Balanced Z in `assets/logo-balanced.svg` is a standalone SVG viewport containing compressed raster artwork from the approved identity board. It is NOT a traced vector or transparent print master. The favicon uses the same approved symbol. Obtain a proper vector master before print or large-format use. No letter shapes have been redesigned for the website.
